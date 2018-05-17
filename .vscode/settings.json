@@ -1,0 +1,27 @@
+{
+    "git.path": "C:\\Tools\\cmder\\vendor\\git-for-windows\\bin",
+    "php.executablePath": "C:\\UniServerZ\\core\\php71\\php.exe",
+    "php.validate.executablePath": "C:\\UniServerZ\\core\\php71\\php.exe",
+    "editor.fontSize": 18,
+    "editor.wordWrap": "on", //bounded' (當檢視區縮至最小並設定 'editor.wordWrapColumn' 時換行).
+    "editor.tabSize": 4,
+    "files.encoding": "utf8",
+	"editor.mouseWheelZoom": true,// 使用滑鼠滾輪並按住 Ctrl 時，縮放編輯器的字型
+    "editor.formatOnType": true,
+    "editor.renderIndentGuides": true,
+    "files.autoSave": "off",
+    "files.autoSaveDelay": 1000,
+    "terminal.integrated.shell.windows": "C:\\Windows\\Sysnative\\cmd.exe",
+    "terminal.integrated.shellArgs.windows": ["/K", "C:\\tools\\vscode-cmder.bat"],
+    "open-in-browser.default": "chrome",
+    "editor.minimap.enabled": true,
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "composer.executablePath": "C:\\Tools\\composer.bat",
+    "phpfmt.php_bin": "C:\\UniServerZ\\core\\php71\\php.exe", 
+    "phpfmt.format_on_save": true, 
+    "phpfmt.indent_with_space": 4, 
+    "phpfmt.enable_auto_align": true, 
+    "phpfmt.visibility_order": true, 
+    "phpfmt.passes": [], 
+    "phpfmt.smart_linebreak_after_curly": true, 
+}
