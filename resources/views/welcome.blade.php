@@ -69,10 +69,10 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">首頁</a>
+                        <a href="{{ url('/home') }}">首頁</a>//read views/home.blade.php
                     @else
-                        <a href="{{ route('login') }}">登入</a>
-                        <a href="{{ route('register') }}">註冊</a>
+                        <a href="{{ route('login') }}">登入</a> //views/auth/login.blade.php
+                        <a href="{{ route('register') }}">註冊</a>//views/auth/register.blade.php
                     @endauth
                 </div>
             @endif

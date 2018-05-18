@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     $senddata=['say'=>' hello ','message'=>' world!!'];
-    return view('welcome',$senddata);//read welcome.blade.php with parameter
+    return view('welcome',$senddata);//read views/welcome.blade.php with parameter
 });
 
 Auth::routes();
