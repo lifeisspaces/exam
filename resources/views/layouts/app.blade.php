@@ -12,69 +12,39 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: whitesmoke;
+            color: red;
+            text-align: center;
+        }
+        </style>
+  
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">登入</a></li>
-                            <li><a href="{{ route('register') }}">註冊</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            登出
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        @yield('content')
+<div id="app">
+    @include('layouts.nav') <!--//include resources/views/nav.blade.php as menu bar-->
+    <div class="container">  <!-- //include welcome.blade.php @section('content') content value@endsection  -->
+     @yield('content')
     </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+</div>
+      
+<div class="footer">
+   <div class="links"> 
+            <a href="https://laravel.com/docs">Documentation</a> 
+            <a href="https://docs.laravel-dojo.com/laravel/5.5">Laravel 道場</a> 
+            <a href="https://campus-xoops.tn.edu.tw/modules/tad_book3/html_all.php?tbsn=34">Laravel 5.5 入門講義</a> 
+            <a href="https://github.com/fukuball/Awesome-Laravel-Education/blob/master/langs/zh_TW.md">Laravel 新手村</a> 
+            <a href="https://forge.laravel.com">Forge</a> 
+            <a href="https://github.com/laravel/laravel">GitHub</a> 
+            <a href="https://github.com/lifeisspaces/exam">原始檔</a> 
+    </div> 
+</div> 
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () {   //set www root is exam/public
     $senddata=['say'=>' hello ','message'=>' world!!'];
-    return view('welcome',$senddata);//read views/welcome.blade.php with parameter
+    return view('welcome',$senddata);//read exam/public/welcome.blade.php with parameter
 });
 
 Auth::routes();
